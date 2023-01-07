@@ -1,5 +1,5 @@
 {% set name = "fps-resource-usage" %}
-{% set version = "0.0.46" %}
+{% set version = "0.0.47" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fps_resource_usage-{{ version }}.tar.gz
-  sha256: b66ef1581ad03b79ea8200c9938ccbee243d764085494d147fd5390954ed77e6
+  sha256: d6887d2713a92e21ff18829099d74768fc25f96ad98e8ae29f1a095d1186b2e2
 
 build:
   noarch: python
