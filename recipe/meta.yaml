@@ -1,5 +1,5 @@
 {% set name = "fps-resource-usage" %}
-{% set version = "0.0.50" %}
+{% set version = "0.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fps_resource_usage-{{ version }}.tar.gz
-  sha256: 18e52e5eb9816223ff1ac646cdc0426178558eb8f3584721b842f1ade602e2a9
+  sha256: b5cd2fba05a0806aea501cf71161e9a2bca9b222621c07daa978e5dea554966a
 
 build:
   noarch: python
@@ -21,8 +21,9 @@ requirements:
     - hatchling
   run:
     - python >=3.8
-    - fps >=0.0.8,<1
+    - jupyverse-api >=0.1.2,<1
     - psutil >=5.9.4
+    - types-psutil
     - anyio >=3.6.2
 
 test:
@@ -32,7 +33,7 @@ test:
 about:
   home: https://github.com/jupyter-server/jupyverse/tree/main/plugins/resource_usage
   summary: An FPS plugin for the resource usage API
-  keywords: jupyter, server, fastapi, pluggy, plugins
+  keywords: jupyter, server, fastapi, plugins
   dev_url: https://github.com/jupyter-server/jupyverse/tree/main/plugins/resource_usage
   license_file: COPYING.md
   license: BSD-3-Clause
