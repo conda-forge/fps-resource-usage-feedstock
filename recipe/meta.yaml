@@ -6,27 +6,29 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fps_resource_usage-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fps_resource_usage-{{ version }}.tar.gz
   sha256: 707fccaeb9e7a02ca52fb6b6c192d1b2be8dc67189fed9cf615f55366f1057a3
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - jupyverse-api >=0.1.4,<1
     - psutil >=5.9.4
     - types-psutil
     - anyio >=3.6.2,<5
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - fps_resource_usage
 
