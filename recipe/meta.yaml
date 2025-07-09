@@ -1,5 +1,5 @@
 {% set name = "fps-resource-usage" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fps_resource_usage-{{ version }}.tar.gz
-  sha256: 142cb322d892250a2a23bc6ab47839ff6713fceed5dcc6be5946fd364c9b4a6c
+  sha256: aaf419247a8f344b540f3f5e15bab64f6fc1a7cb186e30f6f3018f49ae2c299f
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.9.0,<0.10.0
+    - jupyverse-api >=0.10.0,<0.11.0
     - psutil >=5.9.4
     - types-psutil
     - anyio >=3.6.2,<5
