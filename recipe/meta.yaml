@@ -21,7 +21,7 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.11.0,<0.12.0
+    - jupyverse-api >=0.12.0,<0.13.0
     - psutil >=5.9.4
     - types-psutil
     - anyio >=3.6.2,<5
@@ -29,6 +29,9 @@ requirements:
 test:
   requires:
     - python {{ python_min }}
+    - pip
+  commands:
+    - pip check
   imports:
     - fps_resource_usage
 
