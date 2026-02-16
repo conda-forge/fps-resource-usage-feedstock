@@ -9,8 +9,6 @@ Package license: BSD-3-Clause
 
 Summary: An FPS plugin for the resource usage API
 
-Development: https://github.com/jupyter-server/jupyverse/tree/main/plugins/resource_usage
-
 Current build status
 ====================
 
