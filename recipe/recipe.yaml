@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.9.7"
+  version: "0.10.1"
 
 package:
   name: fps-resource-usage
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/f/fps-resource-usage/fps_resource_usage-${{ version }}.tar.gz
-    sha256: c463538f47394ffcb9491e3f26d495460b0d7b3f9d011880d14055acd42f43c6
+    sha256: bb053122b4b10626959781383d520da925ee424b89b1240130deee3c53a26ec2
 
 build:
   noarch: python
