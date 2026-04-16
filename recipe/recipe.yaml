@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.9.7"
+  version: "0.10.2"
 
 package:
   name: fps-resource-usage
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/f/fps-resource-usage/fps_resource_usage-${{ version }}.tar.gz
-    sha256: c463538f47394ffcb9491e3f26d495460b0d7b3f9d011880d14055acd42f43c6
+    sha256: 8c2ad0adece8370e7745599146aed87bebd740bf07d544cdfe0004eff384d970
 
 build:
   noarch: python
@@ -24,7 +24,11 @@ requirements:
     - uv-build
   run:
     - python >=${{ python_min }}
-    - jupyverse-api >=0.14.0,<0.15.0
+    - anyio
+    - fps
+    - jupyverse-api >=0.15.0,<0.16.0
+    - jupyverse-auth >=0.2.0,<0.3.0
+    - jupyverse-resource-usage >=0.1.2,<0.2.0
     - psutil >=5.9.4
     - types-psutil
 
