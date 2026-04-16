@@ -24,7 +24,11 @@ requirements:
     - uv-build
   run:
     - python >=${{ python_min }}
-    - jupyverse-api >=0.14.0,<0.15.0
+    - anyio
+    - fps
+    - jupyverse-api >=0.15.0,<0.16.0
+    - jupyverse-auth >=0.2.0,<0.3.0
+    - jupyverse-resource-usage >=0.1.2,<0.2.0
     - psutil >=5.9.4
     - types-psutil
 
